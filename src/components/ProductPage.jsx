@@ -19,7 +19,7 @@ const ProductPage = () => {
 
   const product = {
     title: "Smart Vision Eyewear",
-    price: "₹2,999",
+    price: 799,
     description:
       "Premium smart eyewear with lightweight frame, UV protection, and built-in smart assistant compatibility.",
     images: [
@@ -30,13 +30,14 @@ const ProductPage = () => {
     ],
   };
 
+  const handleBuyNow = () => {
+    navigate("/address", {
+      state: { price: product.price }, // <-- sending amount to next page
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-      {/* Header */}
-      <header className="w-full bg-white shadow p-5 text-center text-2xl font-bold tracking-wide">
-        MyEyewearStore
-      </header>
-
       {/* Product Card */}
       <div className="mt-10 bg-white rounded-xl shadow-xl p-6 max-w-xl w-full">
         {/* Carousel */}
@@ -53,20 +54,55 @@ const ProductPage = () => {
         </Slider>
 
         {/* Product Info */}
-        <div className="mt-6">
-          <h2 className="text-2xl font-semibold">{product.title}</h2>
-          <p className="text-gray-600 mt-2">{product.description}</p>
+        <div className="space-y-6">
+          <h1 className="text-4xl font-semibold text-gray-900 leading-tight">
+            Premium Minimal Eyewear – Ultra-Light & Scratch Proof
+          </h1>
 
-          <p className="text-3xl font-bold text-blue-600 mt-4">
-            {product.price}
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Elevate your everyday look with ultra-light frames, HD UV-400 lenses
+            and anti-scratch premium coating. Perfect for daily wear with a
+            minimal luxury touch.
           </p>
 
-          <button
-            onClick={() => navigate("/shipping")}
-            className="mt-6 w-full bg-blue-600 text-white text-lg py-3 rounded-lg shadow hover:bg-blue-700 transition"
-          >
-            Buy Now
-          </button>
+          {/* Pricing */}
+          <div className="flex items-end gap-3">
+            <p className="text-5xl font-bold text-gray-900">{product.price}</p>
+            <p className="line-through text-gray-400 text-xl">₹2,299</p>
+            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+              discount
+            </span>
+          </div>
+
+          {/* Highlights */}
+          <div className="space-y-2">
+            <h2 className="text-xl font-semibold text-gray-900">
+              Key Features
+            </h2>
+            <ul className="text-gray-600 space-y-1">
+              <li>✔ Ultra-light Japanese frame</li>
+              <li>✔ HD UV-400 Premium Lenses</li>
+              <li>✔ Anti-Scratch & Anti-Glare Coated</li>
+              <li>✔ Sweat & Dust Resistant</li>
+            </ul>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-4 pt-4">
+            <button
+              onClick={handleBuyNow}
+              className="bg-black text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-gray-900 transition shadow-md"
+            >
+              Buy Now
+            </button>
+          </div>
+
+          {/* Guarantee */}
+          <div className="pt-6 border-t border-gray-200 text-gray-600 text-sm space-y-1">
+            <p>💎 7-Day Easy Return Guarantee</p>
+            <p>🚚 Free Delivery Across India</p>
+            <p>🔐 100% Secure & Encrypted Payment</p>
+          </div>
         </div>
       </div>
     </div>
