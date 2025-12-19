@@ -7,7 +7,7 @@ import Contact from "./pages/Contact"
 import About from "./pages/About"
 import TermsAndConditions from "./pages/TermsAndConditions";
 import Footer from "./components/Footer"
-
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </BrowserRouter>
