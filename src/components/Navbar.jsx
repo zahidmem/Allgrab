@@ -1,107 +1,89 @@
-// components/Navbar.js
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className=" bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="text-white text-2xl font-bold">
-              AllGrab.in
+    <nav
+      className="bg-gradient-to-r from-black via-gray-900 to-black text-white
+"
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-white">
+            allgrab<span className="text-blue-600">.in</span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link to="/" className="hover:text-blue-600">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-blue-600">
+              about
+            </Link>
+            <Link to="/PrivacyPolicy" className="hover:text-blue-600">
+              Privacy-Policy
+            </Link>
+            <Link to="/contact" className="hover:text-blue-600">
+              Contact
             </Link>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6">
-              <Link
-                to="/"
-                className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-              >
-                Home
-              </Link>
-              <Link
-                to="/About"
-                className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-              >
-                About
-              </Link>
-              <Link
-                to="/Contact"
-                className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-              >
-                Contact-Us
-              </Link>
-              <Link
-                to="/TermsAndConditions"
-                className="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300"
-              >
-                Terms and Conditions
-              </Link>
-            </div>
-          </div>
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none"
+
+          {/* Mobile Button */}
+          <button className="md:hidden" onClick={() => setOpen(!open)}>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
             >
-              <svg
-                className="h-6 w-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link onClick= {() => setIsOpen(false)}
-              to="/"
-              className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Home
-            </Link>
-            <Link onClick= {() => setIsOpen(false)}
-              to="/About"
-              className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              About
-            </Link>
-            <Link onClick= {() => setIsOpen(false)}
-              to="/Contact"
-              className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Contact-Us
-            </Link>
-            <Link onClick= {() => setIsOpen(false)}
-              to="/TermsAndConditions"
-              className="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Terms and conditions
-            </Link>
-          </div>
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden bg-white shadow-lg">
+          <Link
+            onClick={() => setOpen(false)}
+            className="block px-4 py-3 border-b"
+            to="/"
+          >
+            Home
+          </Link>
+          <Link
+            onClick={() => setOpen(false)}
+            className="block px-4 py-3 border-b"
+            to="/about"
+          >
+            About
+          </Link>
+          <Link
+            onClick={() => setOpen(false)}
+            className="block px-4 py-3 border-b"
+            to="/PrivacyPolicy"
+          >
+            Privacy-Policy
+          </Link>
+          <Link
+            onClick={() => setOpen(false)}
+            className="block px-4 py-3"
+            to="/contact"
+          >
+            Contact-us
+          </Link>
         </div>
       )}
     </nav>
   );
-};
-
-export default Navbar;
+}
