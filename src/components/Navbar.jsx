@@ -53,7 +53,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-black shadow-lg">
           <Link
             onClick={() => setOpen(false)}
             className="block px-4 py-3 border-b"

@@ -137,7 +137,7 @@ export default function AddressForm() {
             value={formData.fullName}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            required
+            
           />
 
           <input
@@ -147,7 +147,7 @@ export default function AddressForm() {
             value={formData.phone}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            required
+            
           />
 
           <input
@@ -157,7 +157,7 @@ export default function AddressForm() {
             value={formData.pincode}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            required
+            
           />
 
           <div className="grid grid-cols-2 gap-4">
@@ -168,7 +168,7 @@ export default function AddressForm() {
               value={formData.state}
               onChange={handleChange}
               className="w-full border p-3 rounded-lg"
-              required
+              
             />
 
             <input
@@ -178,7 +178,7 @@ export default function AddressForm() {
               value={formData.city}
               onChange={handleChange}
               className="w-full border p-3 rounded-lg"
-              required
+              
             />
           </div>
 
@@ -189,7 +189,7 @@ export default function AddressForm() {
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
             rows="3"
-            required
+            
           ></textarea>
 
           <button
