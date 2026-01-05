@@ -53,7 +53,7 @@ const ProductPage = () => {
           ))}
         </Slider>{" "}
         {/* Product Info */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           <div className="pt-6 border-t border-gray-200 text-gray-600 text-sm "></div>
           <h1 className="text-4xl font-semibold text-gray-900 leading-tight">
             Premium Minimal Eyewear – Ultra-Light & Scratch Proof
