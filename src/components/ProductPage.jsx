@@ -39,7 +39,7 @@ const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
       {/* Product Card */}
-      <div className="mt-10 bg-white rounded-xl shadow-xl p-6 max-w-xl w-full">
+      <div className="bg-white rounded-xl shadow-xl p-2 max-w-xl w-full">
         {/* Carousel */}
         <Slider {...settings}>
           {product.images.map((img, index) => (
@@ -51,10 +51,10 @@ const ProductPage = () => {
               />
             </div>
           ))}
-        </Slider>
-
+        </Slider>{" "}
         {/* Product Info */}
-        <div className="space-y-6">
+        <div className="space-y-4">
+          <div className="pt-6 border-t border-gray-200 text-gray-600 text-sm "></div>
           <h1 className="text-4xl font-semibold text-gray-900 leading-tight">
             Premium Minimal Eyewear – Ultra-Light & Scratch Proof
           </h1>
@@ -99,7 +99,7 @@ const ProductPage = () => {
 
           {/* Guarantee */}
           <div className="pt-6 border-t border-gray-200 text-gray-600 text-sm space-y-1">
-            <p>💎 7-Day Easy Return Guarantee</p>
+            <p>💎 All products checked before dispatch</p>
             <p>🚚 Free Delivery Across India</p>
             <p>🔐 100% Secure & Encrypted Payment</p>
           </div>
