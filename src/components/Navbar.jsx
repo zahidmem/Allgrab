@@ -22,10 +22,13 @@ export default function Navbar() {
               Home
             </Link>
             <Link to="/about" className="hover:text-blue-600">
-              about
+              About
             </Link>
             <Link to="/PrivacyPolicy" className="hover:text-blue-600">
               Privacy-Policy
+            </Link>
+            <Link to="/TermsAndConditions" className="hover:text-blue-600">
+              Terms & Conditions
             </Link>
             <Link to="/contact" className="hover:text-blue-600">
               Contact

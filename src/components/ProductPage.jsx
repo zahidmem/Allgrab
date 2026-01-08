@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
-import whatsAppButton from "./WhatsAppButton";
+import WhatsAppButton from "./WhatsAppButton";
 
 const ProductPage = () => {
   const navigate = useNavigate();
@@ -38,6 +38,8 @@ const ProductPage = () => {
   };
 
   return (
+    <>
+    
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
       {/* Product Card */}
       <div className="bg-white rounded-xl shadow-xl p-2 max-w-xl w-full">
@@ -107,9 +109,11 @@ const ProductPage = () => {
         </div>
       </div>
     </div>
-  );
 
-  <whatsAppButton />
+    <WhatsAppButton />
+    </>
+  );
+   
 };
 
 export default ProductPage;
