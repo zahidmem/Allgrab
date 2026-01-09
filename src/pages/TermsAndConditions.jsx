@@ -69,7 +69,7 @@ const TermsAndConditions = () => {
             We will not be liable for any damages or losses arising from your use of our Services.
           </p>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Governing Law</h2>
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-600 mb-4"> 
             These Terms will be governed by and construed in accordance with the laws of India.
           </p>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Changes to Terms</h2>
@@ -83,6 +83,7 @@ const TermsAndConditions = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

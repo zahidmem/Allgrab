@@ -78,6 +78,15 @@ export default function Navbar() {
           >
             Privacy-Policy
           </Link>
+
+          <Link
+            onClick={() => setOpen(false)}
+            className="block px-4 py-3 border-b"
+            to="/TermsAndConditions"
+          >
+            Terms & Conditions
+          </Link>
+
           <Link
             onClick={() => setOpen(false)}
             className="block px-4 py-3"

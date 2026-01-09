@@ -53,7 +53,7 @@ export default function AddressForm() {
         key: import.meta.env.VITE_RZP_KEY_ID,
         amount: price,
         currency: "INR",
-        name: "allgrab.com",
+        name: "allgrab.in",
         description: "Payment",
         order_id: order.id,
 
@@ -86,7 +86,13 @@ export default function AddressForm() {
         },
 
         notes: {
+          name: formData.fullName,
+          contact: formData.phone,
           address: formData.addressLine,
+          city: formData.city,
+          state: formData.state,
+          pincode: formData.pincode,
+          // 🔥 ADDING ADDRESS TO NOTES
         },
 
         theme: { color: "#000000" },
@@ -117,7 +123,9 @@ export default function AddressForm() {
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
           <div className="flex flex-col items-center gap-4">
             <div className="w-14 h-14 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
-            <p className="text-white text-lg">Redirecting to payment...</p>
+            <p className="text-white text-lg">
+              Redirecting to payment... do not close tab
+            </p>
           </div>
         </div>
       )}
@@ -137,7 +145,7 @@ export default function AddressForm() {
             value={formData.fullName}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            
+            required
           />
 
           <input
@@ -147,7 +155,7 @@ export default function AddressForm() {
             value={formData.phone}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            
+            required
           />
 
           <input
@@ -157,7 +165,7 @@ export default function AddressForm() {
             value={formData.pincode}
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-            
+            required
           />
 
           <div className="grid grid-cols-2 gap-4">
@@ -168,7 +176,7 @@ export default function AddressForm() {
               value={formData.state}
               onChange={handleChange}
               className="w-full border p-3 rounded-lg"
-              
+              required
             />
 
             <input
@@ -178,7 +186,7 @@ export default function AddressForm() {
               value={formData.city}
               onChange={handleChange}
               className="w-full border p-3 rounded-lg"
-              
+              required
             />
           </div>
 
@@ -189,7 +197,7 @@ export default function AddressForm() {
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
             rows="3"
-            
+            required
           ></textarea>
 
           <button
