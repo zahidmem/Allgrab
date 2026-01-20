@@ -203,7 +203,7 @@ export default function AddressForm() {
           <button
             type="submit"
             className="w-full bg-black text-white py-3 rounded-lg text-lg font-medium hover:bg-gray-900"
-            disabled
+            
           >
             Pay Now (₹{amount})
           </button>
