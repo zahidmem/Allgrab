@@ -20,7 +20,7 @@ const ProductPage = () => {
 
   const product = {
     title: "Smart Vision Eyewear",
-    price: 100,
+    price: 20,
     description:
       "Premium smart eyewear with lightweight frame, UV protection, and built-in smart assistant compatibility.",
     images: [

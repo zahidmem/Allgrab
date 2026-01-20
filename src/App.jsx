@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TopMovingBanner from "./components/TopMovingBanner";
 import ScrollToTop from "./components/ScrollToTop";
+
 export default function App() {
   return (
     <BrowserRouter>
