@@ -66,7 +66,7 @@ const ProductPage = () => {
             {/* Pricing */}
             <div className="flex items-end gap-3">
               <p className="text-5xl font-bold text-gray-900">
-                {product.price}
+                ₹{product.price}
               </p>
               <p className="line-through text-gray-400 text-xl">₹2,299</p>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
