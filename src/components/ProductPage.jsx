@@ -20,10 +20,17 @@ const ProductPage = () => {
 
   const product = {
     title: "Smart Vision Eyewear",
-    price: 20,
+    price: 899,
     description:
       "Premium smart eyewear with lightweight frame, UV protection, and built-in smart assistant compatibility.",
-    images: ["/product1.png", "/product2.png", "/product3.png"],
+    images: [
+      "img1.jpeg",
+      "/img2.jpeg",
+      "/img3.jpeg",
+      "/img4.jpeg",
+      "/img5.png",
+      "/img6.jpeg",
+    ],
   };
 
   const handleBuyNow = () => {
@@ -68,7 +75,7 @@ const ProductPage = () => {
               <p className="text-5xl font-bold text-gray-900">
                 ₹{product.price}
               </p>
-              <p className="line-through text-gray-400 text-xl">₹2,299</p>
+              <p className="line-through text-gray-400 text-xl">₹1799</p>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                 discount
               </span>
@@ -82,7 +89,7 @@ const ProductPage = () => {
               <ul className="text-gray-600 space-y-1">
                 <li>✔ Ultra-light Japanese frame</li>
                 <li>✔ HD UV-400 Premium Lenses</li>
-                <li>✔ Anti-Scratch & Anti-Glare Coated</li>
+                <li>✔ Anti-resistent & Anti-Glare Coated</li>
                 <li>✔ Sweat & Dust Resistant</li>
               </ul>
             </div>
