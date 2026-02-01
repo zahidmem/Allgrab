@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 import WhatsAppButton from "./WhatsAppButton";
-
+import LensCompare from "./lensCompare";
 const ProductPage = () => {
   const navigate = useNavigate();
   const settings = {
@@ -23,14 +23,7 @@ const ProductPage = () => {
     price: 899,
     description:
       "Premium smart eyewear with lightweight frame, UV protection, and built-in smart assistant compatibility.",
-    images: [
-      "img1.jpeg",
-      "/img2.jpeg",
-      "/img3.jpeg",
-      "/img4.jpeg",
-      "/img5.png",
-      "/img6.jpeg",
-    ],
+    images: ["img1.png", "/img2.png", "/img3.png", "/img4.png"],
   };
 
   const handleBuyNow = () => {
@@ -80,6 +73,10 @@ const ProductPage = () => {
                 discount
               </span>
             </div>
+
+            {/* Lens Compare */}
+
+            <LensCompare />
 
             {/* Highlights */}
             <div className="space-y-2">
